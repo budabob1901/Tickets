@@ -13,11 +13,11 @@
     <left>
         <VBox prefWidth="200" spacing="0">
             <children>
-                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
-                <Pane prefHeight="80" style="-fx-background-color: #3B82F6;" />
-                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
-                <Pane prefHeight="80" style="-fx-background-color: #3B82F6;" />
-                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
+                <Pane prefHeight="120" style="-fx-background-color: #1E3A8A;" />
+                <Pane prefHeight="120" style="-fx-background-color: #3B82F6;" />
+                <Pane prefHeight="120" style="-fx-background-color: #1E3A8A;" />
+                <Pane prefHeight="120" style="-fx-background-color: #3B82F6;" />
+                <Pane prefHeight="120" style="-fx-background-color: #1E3A8A;" />
             </children>
         </VBox>
     </left>
