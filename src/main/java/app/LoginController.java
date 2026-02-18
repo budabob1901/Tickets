@@ -13,7 +13,7 @@ public class LoginController {
     @FXML private PasswordField passwordField;
 
     public void onLogin() {
-        loadPage("Home.fxml");
+        loadPage("Tickets.fxml");
     }
 
     public void onSignup() {
