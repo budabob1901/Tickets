@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="app.TicketsController"
-      alignment="CENTER"
-      spacing="20">
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.TicketsController"
+            prefWidth="900"
+            prefHeight="600">
 
-    <children>
-        <Label text="Welcome to your tickets!" />
-    </children>
+    <!-- VENSTRE SIDEBAR -->
+    <left>
+        <VBox prefWidth="200" spacing="0">
+            <children>
+                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
+                <Pane prefHeight="80" style="-fx-background-color: #3B82F6;" />
+                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
+                <Pane prefHeight="80" style="-fx-background-color: #3B82F6;" />
+                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
+            </children>
+        </VBox>
+    </left>
 
-</VBox>
+    <!-- HOVEDINDHOLD -->
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 20;">
+            <children>
+
+                <Label text="Events" style="-fx-font-size: 32px; -fx-font-weight: bold;" />
+
+                <VBox spacing="20" prefWidth="600">
+                    <children>
+                        <Pane prefHeight="120" style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;" />
+                        <Pane prefHeight="120" style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;" />
+                        <Pane prefHeight="120" style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;" />
+                    </children>
+                </VBox>
+
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
