@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.HomeController"
+            stylesheets="@style.css"
+            styleClass="white-bg">
+
+    <top>
+        <HBox spacing="20" padding="20" styleClass="dark-blue">
+            <children>
+                <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 20;"/>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <children>
+                <Label text="Main Content Area" style="-fx-font-size: 18;"/>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
