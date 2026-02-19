@@ -3,48 +3,138 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
+<AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="app.TicketsController"
-            prefWidth="900"
-            prefHeight="600">
+            prefWidth="1200"
+            prefHeight="700"
+            stylesheets="@style.css">
 
-    <left>
-        <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1E3A8A; -fx-padding: 20;">
+    <children>
+
+        <!-- VENSTRE MENU -->
+        <VBox layoutX="0" layoutY="0"
+              prefWidth="220"
+              prefHeight="700"
+              spacing="20"
+              style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
+
             <children>
 
-                <!-- Menu øverst -->
-                <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="Create event" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" />
+                <!-- LOGO -->
+                <Label text="seo"
+                       style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
 
-                <!-- TOMT FELT DER SKUBBER DET NED -->
+                <!-- MENU -->
+                <VBox spacing="15">
+                    <children>
+                        <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goHome"/>
+                        <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goEvents"/>
+                        <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goTickets"/>
+                    </children>
+                </VBox>
+
+                <!-- SPACER -->
                 <Pane VBox.vgrow="ALWAYS" />
 
-                <!-- Account settings nederst -->
-                <Label text="Account settings" style="-fx-text-fill: white; -fx-font-size: 18;" />
-
-            </children>
-        </VBox>
-    </left>
-
-    <center>
-        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 20;">
-            <children>
-
-                <Label text="Events" style="-fx-font-size: 32px; -fx-font-weight: bold;" />
-
-                <VBox spacing="20" prefWidth="600">
+                <!-- BUND-MENU -->
+                <VBox spacing="10">
                     <children>
-                        <Pane prefHeight="120" style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;" />
-                        <Pane prefHeight="120" style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;" />
-                        <Pane prefHeight="120" style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;" />
+                        <Label text="Account settings"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goAccount"/>
                     </children>
                 </VBox>
 
             </children>
         </VBox>
-    </center>
 
-</BorderPane>
+        <!-- HOVEDINDHOLD -->
+        <VBox layoutX="260" layoutY="40" spacing="30">
+
+            <children>
+
+                <!-- DUMMY LABEL TIL CONTROLLER -->
+                <Label fx:id="dummy" visible="false"/>
+
+                <!-- OVERSKRIFT -->
+                <Label text="My Tickets"
+                       style="-fx-font-size: 28; -fx-font-weight: bold;" />
+
+                <!-- INTRO TEKST -->
+                <Label text="Hello! Here you can view your tickets"
+                       style="-fx-font-size: 16;" />
+
+                <!-- YOUR TICKETS -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Your tickets"
+                               style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+                        <!-- TICKET 1 -->
+                        <HBox spacing="20"
+                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
+                              prefWidth="700">
+                            <children>
+                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
+                                <Pane HBox.hgrow="ALWAYS"/>
+                                <Label text="1 ticket" style="-fx-font-size: 16;" />
+                                <Button text="Print" />
+                            </children>
+                        </HBox>
+
+                        <!-- TICKET 2 -->
+                        <HBox spacing="20"
+                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
+                              prefWidth="700">
+                            <children>
+                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
+                                <Pane HBox.hgrow="ALWAYS"/>
+                                <Label text="1 ticket" style="-fx-font-size: 16;" />
+                                <Button text="Print" />
+                            </children>
+                        </HBox>
+
+                        <!-- TICKET 3 -->
+                        <HBox spacing="20"
+                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
+                              prefWidth="700">
+                            <children>
+                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
+                                <Pane HBox.hgrow="ALWAYS"/>
+                                <Label text="1 ticket" style="-fx-font-size: 16;" />
+                                <Button text="Print" />
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <!-- EXTRA TICKETS -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Extra tickets (beer etc.)"
+                               style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+                        <HBox spacing="20"
+                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
+                              prefWidth="700">
+                            <children>
+                                <Label text="Free beer: One free beer for Sommerfest"
+                                       style="-fx-font-size: 16;" />
+                                <Pane HBox.hgrow="ALWAYS"/>
+                                <Label text="1 ticket" style="-fx-font-size: 16;" />
+                                <Button text="Print" />
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+            </children>
+        </VBox>
+
+    </children>
+</AnchorPane>

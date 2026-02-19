@@ -3,104 +3,150 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
+<AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="app.HomeController"
-            prefWidth="1000"
-            prefHeight="650"
+            prefWidth="1200"
+            prefHeight="700"
             stylesheets="@style.css">
 
-    <!-- VENSTRE MENU -->
-    <left>
-        <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1E3A8A; -fx-padding: 20;">
+    <children>
+
+        <!-- VENSTRE MENU -->
+        <VBox layoutX="0" layoutY="0"
+              prefWidth="220"
+              prefHeight="700"
+              spacing="20"
+              style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
+
             <children>
-                <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="Create event" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" />
-                <Label text="Account settings" style="-fx-text-fill: white; -fx-font-size: 18;" />
+
+                <!-- LOGO -->
+                <Label text="sea"
+                       style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
+
+                <!-- MENU -->
+                <VBox spacing="15">
+                    <children>
+                        <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goHome"/>
+                        <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goEvents"/>
+                        <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goTickets"/>
+                    </children>
+                </VBox>
+
+                <!-- SPACER -->
+                <Pane VBox.vgrow="ALWAYS" />
+
+                <!-- BUND-MENU -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Account settings"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goAccount"/>
+                    </children>
+                </VBox>
+
             </children>
         </VBox>
-    </left>
 
-    <!-- HOVEDINDHOLD -->
-    <center>
-        <VBox spacing="30" style="-fx-padding: 30;">
+        <!-- HOVEDINDHOLD -->
+        <VBox layoutX="240" layoutY="20" spacing="40">
+
             <children>
+
+                <!-- DUMMY LABEL TIL CONTROLLER -->
+                <Label fx:id="dummy" visible="false"/>
 
                 <!-- OVERSKRIFT -->
-                <Label text="Event Coordinator Dashboard"
-                       style="-fx-font-size: 28; -fx-font-weight: bold;" />
+                <Label text="Home/Mainpage - Customer"
+                       style="-fx-font-size: 26; -fx-font-weight: bold;" />
 
-                <!-- EVENTS YOU'RE A PART OF -->
+                <!-- FEATURED EVENTS -->
                 <VBox spacing="15">
                     <children>
-                        <Label text="Events you're a part of:"
-                               style="-fx-font-size: 20; -fx-font-weight: bold;" />
 
-                        <!-- EVENT CARD 1 -->
-                        <HBox spacing="20" style="-fx-background-color: #E5E7EB; -fx-padding: 15; -fx-background-radius: 10;">
-                            <children>
-                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Button text="Edit" />
-                                <Button text="Delete" />
-                            </children>
-                        </HBox>
+                        <Label text="Featured events"
+                               style="-fx-font-size: 22; -fx-font-weight: bold;" />
 
-                        <!-- EVENT CARD 2 -->
-                        <HBox spacing="20" style="-fx-background-color: #E5E7EB; -fx-padding: 15; -fx-background-radius: 10;">
+                        <HBox spacing="20">
                             <children>
-                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Button text="Edit" />
-                                <Button text="Delete" />
-                            </children>
-                        </HBox>
 
-                        <!-- EVENT CARD 3 -->
-                        <HBox spacing="20" style="-fx-background-color: #E5E7EB; -fx-padding: 15; -fx-background-radius: 10;">
-                            <children>
-                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Button text="Edit" />
-                                <Button text="Delete" />
+                                <!-- BOX 1 -->
+                                <AnchorPane prefWidth="250" prefHeight="150"
+                                            style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D1D5DB;">
+                                    <children>
+                                        <Label text="Event informations here"
+                                               layoutX="20" layoutY="20"
+                                               style="-fx-font-size: 16;" />
+                                    </children>
+                                </AnchorPane>
+
+                                <!-- BOX 2 -->
+                                <AnchorPane prefWidth="250" prefHeight="150"
+                                            style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D1D5DB;">
+                                    <children>
+                                        <Label text="Event informations here"
+                                               layoutX="20" layoutY="20"
+                                               style="-fx-font-size: 16;" />
+                                    </children>
+                                </AnchorPane>
+
+                                <!-- BOX 3 -->
+                                <AnchorPane prefWidth="250" prefHeight="150"
+                                            style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D1D5DB;">
+                                    <children>
+                                        <Label text="Event informations here"
+                                               layoutX="20" layoutY="20"
+                                               style="-fx-font-size: 16;" />
+                                    </children>
+                                </AnchorPane>
+
                             </children>
                         </HBox>
 
                     </children>
                 </VBox>
 
-                <!-- PRINT TICKETS -->
+                <!-- ALL EVENTS -->
                 <VBox spacing="15">
                     <children>
-                        <Label text="Print tickets:"
-                               style="-fx-font-size: 20; -fx-font-weight: bold;" />
 
-                        <!-- PRINT CARD 1 -->
-                        <HBox spacing="20" style="-fx-background-color: #E5E7EB; -fx-padding: 15; -fx-background-radius: 10;">
-                            <children>
-                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Button text="Print tickets" />
-                            </children>
-                        </HBox>
+                        <Label text="All events"
+                               style="-fx-font-size: 22; -fx-font-weight: bold;" />
 
-                        <!-- PRINT CARD 2 -->
-                        <HBox spacing="20" style="-fx-background-color: #E5E7EB; -fx-padding: 15; -fx-background-radius: 10;">
+                        <HBox spacing="20">
                             <children>
-                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Button text="Print tickets" />
-                            </children>
-                        </HBox>
 
-                        <!-- PRINT CARD 3 -->
-                        <HBox spacing="20" style="-fx-background-color: #E5E7EB; -fx-padding: 15; -fx-background-radius: 10;">
-                            <children>
-                                <Label text="Event name and info here" style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Button text="Print tickets" />
+                                <!-- BOX 1 -->
+                                <AnchorPane prefWidth="250" prefHeight="150"
+                                            style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D1D5DB;">
+                                    <children>
+                                        <Label text="Event informations here"
+                                               layoutX="20" layoutY="20"
+                                               style="-fx-font-size: 16;" />
+                                    </children>
+                                </AnchorPane>
+
+                                <!-- BOX 2 -->
+                                <AnchorPane prefWidth="250" prefHeight="150"
+                                            style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D1D5DB;">
+                                    <children>
+                                        <Label text="Event informations here"
+                                               layoutX="20" layoutY="20"
+                                               style="-fx-font-size: 16;" />
+                                    </children>
+                                </AnchorPane>
+
+                                <!-- BOX 3 -->
+                                <AnchorPane prefWidth="250" prefHeight="150"
+                                            style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D1D5DB;">
+                                    <children>
+                                        <Label text="Event informations here"
+                                               layoutX="20" layoutY="20"
+                                               style="-fx-font-size: 16;" />
+                                    </children>
+                                </AnchorPane>
+
                             </children>
                         </HBox>
 
@@ -109,6 +155,6 @@
 
             </children>
         </VBox>
-    </center>
 
-</BorderPane>
+    </children>
+</AnchorPane>
