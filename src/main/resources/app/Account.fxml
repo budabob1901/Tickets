@@ -12,45 +12,8 @@
 
     <children>
 
-        <!-- VENSTRE MENU -->
-        <VBox prefWidth="220"
-              prefHeight="700"
-              spacing="20"
-              style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
-
-            <children>
-
-                <!-- LOGO -->
-                <Label text="see"
-                       style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
-
-                <!-- MENU -->
-                <VBox spacing="15">
-                    <children>
-
-                        <Label text="Home"
-                               style="-fx-text-fill: white; -fx-font-size: 18;"
-                               onMouseClicked="#goHome"/>
-
-                        <Label text="Events"
-                               style="-fx-text-fill: white; -fx-font-size: 18;"
-                               onMouseClicked="#goEvents"/>
-
-                        <Label text="My tickets"
-                               style="-fx-text-fill: white; -fx-font-size: 18;"
-                               onMouseClicked="#goTickets"/>
-
-                        <Label text="Account settings"
-                               style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;"
-                               onMouseClicked="#goAccount"/>
-
-                    </children>
-                </VBox>
-
-                <Pane VBox.vgrow="ALWAYS"/>
-
-            </children>
-        </VBox>
+        <!-- VENSTRE MENU (NavigationController) -->
+        <fx:include source="Sidebar.fxml"/>
 
         <!-- HOVEDINDHOLD -->
         <HBox layoutX="260" layoutY="40" spacing="40">

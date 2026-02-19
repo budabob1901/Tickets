@@ -12,51 +12,13 @@
 
     <children>
 
-        <!-- VENSTRE MENU -->
-        <VBox layoutX="0" layoutY="0"
-              prefWidth="220"
-              prefHeight="700"
-              spacing="20"
-              style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
-
-            <children>
-
-                <!-- LOGO -->
-                <Label text="sea"
-                       style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
-
-                <!-- MENU -->
-                <VBox spacing="15">
-                    <children>
-                        <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goHome"/>
-                        <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goEvents"/>
-                        <Label text="Create event" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goCreateEvent"/>
-                        <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goTickets"/>
-                    </children>
-                </VBox>
-
-                <!-- SPACER -->
-                <Pane VBox.vgrow="ALWAYS" />
-
-                <!-- BUND-MENU -->
-                <VBox spacing="10">
-                    <children>
-                        <Label text="Account settings"
-                               style="-fx-text-fill: white; -fx-font-size: 18;"
-                               onMouseClicked="#goAccount"/>
-                    </children>
-                </VBox>
-
-            </children>
-        </VBox>
+        <!-- VENSTRE MENU (NavigationController) -->
+        <fx:include source="Sidebar.fxml"/>
 
         <!-- HOVEDINDHOLD -->
         <VBox layoutX="240" layoutY="20" spacing="40">
 
             <children>
-
-                <!-- DUMMY LABEL TIL CONTROLLER -->
-                <Label fx:id="dummy" visible="false"/>
 
                 <!-- OVERSKRIFT -->
                 <Label text="Home/Mainpage - Customer"

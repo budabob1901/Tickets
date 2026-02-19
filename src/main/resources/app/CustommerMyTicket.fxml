@@ -6,7 +6,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="app.TicketsController"
+            fx:controller="app.CustomerMyTicketsController"
             prefWidth="1200"
             prefHeight="700">
 
@@ -21,10 +21,9 @@
             <children>
 
                 <!-- OVERSKRIFT -->
-                <Label text="My Tickets"
+                <Label text="My tickets - Customer"
                        style="-fx-font-size: 28; -fx-font-weight: bold;" />
 
-                <!-- INTRO TEKST -->
                 <Label text="Hello! Here you can view your tickets"
                        style="-fx-font-size: 16;" />
 

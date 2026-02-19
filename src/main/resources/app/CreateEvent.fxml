@@ -10,20 +10,9 @@
             prefWidth="1000"
             prefHeight="650">
 
-    <!-- LEFT SIDEBAR -->
+    <!-- LEFT SIDEBAR (NavigationController) -->
     <left>
-        <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1E3A8A; -fx-padding: 20;">
-            <children>
-                <Button text="Home" onAction="#goHome" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
-                <Button text="Events" onAction="#goEvents" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
-                <Button text="Create event" onAction="#goCreateEvent" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
-                <Button text="My tickets" onAction="#goTickets" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
-
-                <Pane VBox.vgrow="ALWAYS" />
-
-                <Button text="Account settings" onAction="#goAccount" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
-            </children>
-        </VBox>
+        <fx:include source="Sidebar.fxml"/>
     </left>
 
     <!-- MAIN CONTENT -->
@@ -70,8 +59,15 @@
 
                 <HBox spacing="20">
                     <children>
-                        <Button text="Cancel" onAction="#cancel" style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 8;" />
-                        <Button text="Create" onAction="#createEvent" style="-fx-background-color: #22C55E; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 8;" />
+
+                        <!-- CANCEL SKAL IKKE NAVIGERE HERFRA -->
+                        <Button text="Cancel"
+                                style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 8;" />
+
+                        <!-- CREATE EVENT VIRKER STADIG -->
+                        <Button text="Create" onAction="#createEvent"
+                                style="-fx-background-color: #22C55E; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 8;" />
+
                     </children>
                 </HBox>
 

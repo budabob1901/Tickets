@@ -13,18 +13,19 @@ public class LoginController {
     @FXML private PasswordField passwordField;
 
     public void onLogin() {
-        loadPage("Tickets.fxml");
+        loadPage("Home.fxml");  // eller CustomerMyTickets.fxml
     }
 
     public void onSignup() {
-        loadPage("Events.fxml"); // VIGTIGT: præcis dette navn
+        loadPage("Events.fxml");
     }
 
     private void loadPage(String fxml) {
         try {
             Stage stage = (Stage) usernameField.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/" + fxml));
             stage.setScene(new Scene(loader.load()));
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }

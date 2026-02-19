@@ -2,11 +2,10 @@
 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.input.MouseEvent?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="app.TicketsController"
+            fx:controller="app.EventsController"
             prefWidth="1200"
             prefHeight="700">
 
@@ -16,26 +15,23 @@
         <fx:include source="Sidebar.fxml"/>
 
         <!-- HOVEDINDHOLD -->
-        <VBox layoutX="260" layoutY="40" spacing="30">
+        <VBox layoutX="240" layoutY="20" spacing="30">
 
             <children>
 
                 <!-- OVERSKRIFT -->
-                <Label text="My Tickets"
+                <Label text="Events"
                        style="-fx-font-size: 28; -fx-font-weight: bold;" />
 
                 <!-- INTRO TEKST -->
-                <Label text="Hello! Here you can view your tickets"
+                <Label text="Browse all available events"
                        style="-fx-font-size: 16;" />
 
-                <!-- YOUR TICKETS -->
+                <!-- EVENTS LISTE -->
                 <VBox spacing="15">
                     <children>
 
-                        <Label text="Your tickets"
-                               style="-fx-font-size: 20; -fx-font-weight: bold;" />
-
-                        <!-- TICKET 1 -->
+                        <!-- EVENT 1 -->
                         <HBox spacing="20"
                               prefWidth="700"
                               style="-fx-background-color: white; -fx-background-radius: 10;
@@ -43,12 +39,11 @@
                             <children>
                                 <Label text="Event name and info here" style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
-                                <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print"/>
+                                <Button text="View"/>
                             </children>
                         </HBox>
 
-                        <!-- TICKET 2 -->
+                        <!-- EVENT 2 -->
                         <HBox spacing="20"
                               prefWidth="700"
                               style="-fx-background-color: white; -fx-background-radius: 10;
@@ -56,12 +51,11 @@
                             <children>
                                 <Label text="Event name and info here" style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
-                                <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print"/>
+                                <Button text="View"/>
                             </children>
                         </HBox>
 
-                        <!-- TICKET 3 -->
+                        <!-- EVENT 3 -->
                         <HBox spacing="20"
                               prefWidth="700"
                               style="-fx-background-color: white; -fx-background-radius: 10;
@@ -69,31 +63,7 @@
                             <children>
                                 <Label text="Event name and info here" style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
-                                <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print"/>
-                            </children>
-                        </HBox>
-
-                    </children>
-                </VBox>
-
-                <!-- EXTRA TICKETS -->
-                <VBox spacing="15">
-                    <children>
-
-                        <Label text="Extra tickets (beer etc.)"
-                               style="-fx-font-size: 20; -fx-font-weight: bold;" />
-
-                        <HBox spacing="20"
-                              prefWidth="700"
-                              style="-fx-background-color: white; -fx-background-radius: 10;
-                                     -fx-padding: 15; -fx-border-color: #D1D5DB;">
-                            <children>
-                                <Label text="Free beer: One free beer for Sommerfest"
-                                       style="-fx-font-size: 16;" />
-                                <Pane HBox.hgrow="ALWAYS"/>
-                                <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print"/>
+                                <Button text="View"/>
                             </children>
                         </HBox>
 

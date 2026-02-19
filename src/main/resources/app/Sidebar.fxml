@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.NavigationController"
+      prefWidth="220"
+      prefHeight="700"
+      spacing="20"
+      style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
+
+    <children>
+
+        <!-- DUMMY LABEL TIL NAVIGATION -->
+        <Label fx:id="dummy" visible="false"/>
+
+        <!-- LOGO -->
+        <Label text="see"
+               style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
+
+        <!-- MENU -->
+        <VBox spacing="15">
+            <children>
+
+                <Label text="Home"
+                       style="-fx-text-fill: white; -fx-font-size: 18;"
+                       onMouseClicked="#goHome"/>
+
+                <Label text="Events"
+                       style="-fx-text-fill: white; -fx-font-size: 18;"
+                       onMouseClicked="#goEvents"/>
+
+                <Label text="Create event"
+                       style="-fx-text-fill: white; -fx-font-size: 18;"
+                       onMouseClicked="#goCreateEvent"/>
+
+                <Label text="My tickets"
+                       style="-fx-text-fill: white; -fx-font-size: 18;"
+                       onMouseClicked="#goTickets"/>
+
+                <Label text="Account settings"
+                       style="-fx-text-fill: white; -fx-font-size: 18;"
+                       onMouseClicked="#goAccount"/>
+
+            </children>
+        </VBox>
+
+        <Pane VBox.vgrow="ALWAYS"/>
+
+    </children>
+
+</VBox>
