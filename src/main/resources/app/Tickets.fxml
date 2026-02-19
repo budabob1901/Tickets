@@ -10,13 +10,21 @@
             prefHeight="600">
 
     <left>
-        <VBox prefWidth="200" spacing="0">
+        <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1E3A8A; -fx-padding: 20;">
             <children>
-                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
-                <Pane prefHeight="80" style="-fx-background-color: #3B82F6;" />
-                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
-                <Pane prefHeight="80" style="-fx-background-color: #3B82F6;" />
-                <Pane prefHeight="80" style="-fx-background-color: #1E3A8A;" />
+
+                <!-- Menu øverst -->
+                <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" />
+                <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" />
+                <Label text="Create event" style="-fx-text-fill: white; -fx-font-size: 18;" />
+                <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" />
+
+                <!-- TOMT FELT DER SKUBBER DET NED -->
+                <Pane VBox.vgrow="ALWAYS" />
+
+                <!-- Account settings nederst -->
+                <Label text="Account settings" style="-fx-text-fill: white; -fx-font-size: 18;" />
+
             </children>
         </VBox>
     </left>
