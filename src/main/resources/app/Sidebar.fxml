@@ -17,7 +17,7 @@
         <Label fx:id="dummy" visible="false"/>
 
         <!-- LOGO -->
-        <Label text="see"
+        <Label text="SEA"
                style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
 
         <!-- MENU -->
