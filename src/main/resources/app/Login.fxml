@@ -16,11 +16,11 @@
       styleClass="dark-blue">
 
     <children>
-        <TextField fx:id="usernameField" promptText="Username" />
-        <PasswordField fx:id="passwordField" promptText="Password" />
+        <TextField fx:id="usernameField" promptText="Username" maxWidth="200"/>
+        <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200"/>
 
-        <Button text="Login" styleClass="button-blue" onAction="#onLogin"/>
-        <Button text="Sign up" styleClass="button-light" onAction="#onSignup"/>
+        <Button text="Login" styleClass="button-blue" onAction="#onLogin" maxWidth="200"/>
+        <Button text="Sign up" styleClass="button-light" onAction="#onSignup" maxWidth="200"/>
     </children>
 
 </VBox>

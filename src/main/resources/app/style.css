@@ -1,60 +1,17 @@
-/* Global font */
-.root {
-    -fx-font-family: "Segoe UI";
-}
-
-/* Background colors */
 .dark-blue {
-    -fx-background-color: #0A2A43;
-}
-
-.light-gray {
-    -fx-background-color: #E6E6E6;
-}
-
-.white-bg {
-    -fx-background-color: white;
-}
-
-/* Buttons */
-.button {
-    -fx-background-radius: 5;
-    -fx-padding: 8 20;
-    -fx-cursor: hand;
+    -fx-background-color: #1E3A8A;
 }
 
 .button-blue {
-    -fx-background-color: #0A2A43;
+    -fx-background-color: #3B82F6;
     -fx-text-fill: white;
-}
-
-.button-blue:hover {
-    -fx-background-color: #0C3A5A;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
 }
 
 .button-light {
-    -fx-background-color: #E6E6E6;
+    -fx-background-color: #E5E7EB;
     -fx-text-fill: black;
-}
-
-.button-light:hover {
-    -fx-background-color: #D5D5D5;
-}
-
-/* Input fields */
-.text-field, .password-field {
-    -fx-background-radius: 5;
-    -fx-padding: 8;
-    -fx-background-color: white;
-    -fx-border-color: #CCCCCC;
-    -fx-border-radius: 5;
-}
-
-.text-field:focused, .password-field:focused {
-    -fx-border-color: #0A2A43;
-}
-
-/* Pane styling (optional) */
-Pane {
-    -fx-background-radius: 4;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
 }
