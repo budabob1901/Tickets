@@ -12,9 +12,9 @@
             styleClass="white-bg">
 
     <top>
-        <HBox spacing="20" padding="20" styleClass="dark-blue">
+        <HBox spacing="20" styleClass="dark-blue" style="-fx-padding: 20;">
             <children>
-                <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 20;"/>
+                <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 20;" />
             </children>
         </HBox>
     </top>
@@ -22,7 +22,7 @@
     <center>
         <VBox alignment="CENTER" spacing="20">
             <children>
-                <Label text="Main Content Area" style="-fx-font-size: 18;"/>
+                <Label text="Main Content Area" style="-fx-font-size: 18;" />
             </children>
         </VBox>
     </center>
