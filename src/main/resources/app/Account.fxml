@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.AccountController"
+            prefWidth="1200"
+            prefHeight="700">
+
+    <children>
+
+        <!-- VENSTRE MENU -->
+        <VBox prefWidth="220"
+              prefHeight="700"
+              spacing="20"
+              style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
+
+            <children>
+
+                <!-- LOGO -->
+                <Label text="see"
+                       style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
+
+                <!-- MENU -->
+                <VBox spacing="15">
+                    <children>
+
+                        <Label text="Home"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goHome"/>
+
+                        <Label text="Events"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goEvents"/>
+
+                        <Label text="My tickets"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goTickets"/>
+
+                        <Label text="Account settings"
+                               style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;"
+                               onMouseClicked="#goAccount"/>
+
+                    </children>
+                </VBox>
+
+                <Pane VBox.vgrow="ALWAYS"/>
+
+            </children>
+        </VBox>
+
+        <!-- HOVEDINDHOLD -->
+        <HBox layoutX="260" layoutY="40" spacing="40">
+
+            <children>
+
+                <!-- PERSONLIG INFORMATION -->
+                <VBox spacing="20" prefWidth="400">
+
+                    <children>
+
+                        <Label text="Personal Information"
+                               style="-fx-font-size: 24; -fx-font-weight: bold;" />
+
+                        <!-- BILLEDE -->
+                        <AnchorPane prefWidth="150" prefHeight="150"
+                                    style="-fx-background-color: #E5E7EB; -fx-background-radius: 10;">
+                            <children>
+                                <Label text="Picture"
+                                       layoutX="50" layoutY="65"
+                                       style="-fx-font-size: 16;" />
+                            </children>
+                        </AnchorPane>
+
+                        <!-- FELTER -->
+                        <VBox spacing="10">
+                            <children>
+
+                                <Label text="E-mail"/>
+                                <TextField fx:id="emailField"/>
+
+                                <Label text="Firstname"/>
+                                <TextField fx:id="firstNameField"/>
+
+                                <Label text="Lastname"/>
+                                <TextField fx:id="lastNameField"/>
+
+                                <Label text="Date of birth"/>
+                                <TextField fx:id="dobField"/>
+
+                                <Label text="Phone"/>
+                                <TextField fx:id="phoneField"/>
+
+                            </children>
+                        </VBox>
+
+                        <Button text="Update profile"
+                                style="-fx-background-color: #1E3A8A; -fx-text-fill: white; -fx-padding: 10 20;"
+                                onAction="#updateProfile"/>
+
+                    </children>
+                </VBox>
+
+                <!-- SIKKERHED -->
+                <VBox spacing="20" prefWidth="400">
+
+                    <children>
+
+                        <Label text="Security Settings"
+                               style="-fx-font-size: 24; -fx-font-weight: bold;" />
+
+                        <!-- PASSWORD SEKTION -->
+                        <VBox spacing="10">
+                            <children>
+
+                                <Label text="Current password"/>
+                                <PasswordField fx:id="currentPasswordField"/>
+
+                                <Label text="New password"/>
+                                <PasswordField fx:id="newPasswordField"/>
+
+                                <Label text="Confirm new password"/>
+                                <PasswordField fx:id="confirmPasswordField"/>
+
+                                <Button text="Change password"
+                                        style="-fx-background-color: #16A34A; -fx-text-fill: white; -fx-padding: 10 20;"
+                                        onAction="#changePassword"/>
+
+                            </children>
+                        </VBox>
+
+                        <!-- DATA SEKTION -->
+                        <VBox spacing="10">
+                            <children>
+
+                                <Button text="Download data"
+                                        style="-fx-background-color: #6B7280; -fx-text-fill: white; -fx-padding: 10 20;"
+                                        onAction="#downloadData"/>
+
+                                <Button text="Delete account"
+                                        style="-fx-background-color: #DC2626; -fx-text-fill: white; -fx-padding: 10 20;"
+                                        onAction="#deleteAccount"/>
+
+                            </children>
+                        </VBox>
+
+                    </children>
+                </VBox>
+
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>

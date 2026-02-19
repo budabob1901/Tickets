@@ -12,8 +12,7 @@
     <children>
 
         <!-- VENSTRE MENU -->
-        <VBox layoutX="0" layoutY="0"
-              prefWidth="220"
+        <VBox prefWidth="220"
               prefHeight="700"
               spacing="20"
               style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
@@ -42,7 +41,7 @@
                 </VBox>
 
                 <!-- SPACER -->
-                <Pane VBox.vgrow="ALWAYS" />
+                <Pane VBox.vgrow="ALWAYS"/>
 
                 <!-- BUND-MENU -->
                 <VBox spacing="10">

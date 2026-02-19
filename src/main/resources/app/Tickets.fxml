@@ -2,19 +2,18 @@
 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.input.MouseEvent?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="app.TicketsController"
             prefWidth="1200"
-            prefHeight="700"
-            stylesheets="@style.css">
+            prefHeight="700">
 
     <children>
 
         <!-- VENSTRE MENU -->
-        <VBox layoutX="0" layoutY="0"
-              prefWidth="220"
+        <VBox prefWidth="220"
               prefHeight="700"
               spacing="20"
               style="-fx-background-color: #1E3A8A; -fx-padding: 25;">
@@ -22,20 +21,28 @@
             <children>
 
                 <!-- LOGO -->
-                <Label text="seo"
+                <Label text="see"
                        style="-fx-text-fill: white; -fx-font-size: 32; -fx-font-weight: bold;" />
 
                 <!-- MENU -->
                 <VBox spacing="15">
                     <children>
-                        <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goHome"/>
-                        <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goEvents"/>
-                        <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goTickets"/>
+                        <Label text="Home"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goHome"/>
+
+                        <Label text="Events"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goEvents"/>
+
+                        <Label text="My tickets"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goTickets"/>
                     </children>
                 </VBox>
 
                 <!-- SPACER -->
-                <Pane VBox.vgrow="ALWAYS" />
+                <Pane VBox.vgrow="ALWAYS"/>
 
                 <!-- BUND-MENU -->
                 <VBox spacing="10">
@@ -74,37 +81,40 @@
 
                         <!-- TICKET 1 -->
                         <HBox spacing="20"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
-                              prefWidth="700">
+                              prefWidth="700"
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 15; -fx-border-color: #D1D5DB;">
                             <children>
                                 <Label text="Event name and info here" style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
                                 <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print" />
+                                <Button text="Print"/>
                             </children>
                         </HBox>
 
                         <!-- TICKET 2 -->
                         <HBox spacing="20"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
-                              prefWidth="700">
+                              prefWidth="700"
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 15; -fx-border-color: #D1D5DB;">
                             <children>
                                 <Label text="Event name and info here" style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
                                 <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print" />
+                                <Button text="Print"/>
                             </children>
                         </HBox>
 
                         <!-- TICKET 3 -->
                         <HBox spacing="20"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
-                              prefWidth="700">
+                              prefWidth="700"
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 15; -fx-border-color: #D1D5DB;">
                             <children>
                                 <Label text="Event name and info here" style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
                                 <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print" />
+                                <Button text="Print"/>
                             </children>
                         </HBox>
 
@@ -119,14 +129,15 @@
                                style="-fx-font-size: 20; -fx-font-weight: bold;" />
 
                         <HBox spacing="20"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15; -fx-border-color: #D1D5DB;"
-                              prefWidth="700">
+                              prefWidth="700"
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 15; -fx-border-color: #D1D5DB;">
                             <children>
                                 <Label text="Free beer: One free beer for Sommerfest"
                                        style="-fx-font-size: 16;" />
                                 <Pane HBox.hgrow="ALWAYS"/>
                                 <Label text="1 ticket" style="-fx-font-size: 16;" />
-                                <Button text="Print" />
+                                <Button text="Print"/>
                             </children>
                         </HBox>
 

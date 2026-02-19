@@ -14,8 +14,9 @@ public class TicketsController {
     private void switchTo(String fxml) {
         try {
             Stage stage = (Stage) dummy.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/" + fxml));
             stage.setScene(new Scene(loader.load()));
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -23,7 +24,7 @@ public class TicketsController {
 
     @FXML
     private void goHome() {
-        switchTo("Home.fxml");
+        System.out.println("goHome VIRKER");
     }
 
     @FXML
