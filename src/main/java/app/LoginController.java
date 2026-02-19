@@ -17,7 +17,7 @@ public class LoginController {
     }
 
     public void onSignup() {
-        loadPage("Event.fxml");
+        loadPage("Events.fxml"); // VIGTIGT: præcis dette navn
     }
 
     private void loadPage(String fxml) {

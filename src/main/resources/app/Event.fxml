@@ -7,8 +7,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="app.EventsController"
             prefWidth="1200"
-            prefHeight="700"
-            stylesheets="@style.css">
+            prefHeight="700">
 
     <children>
 
@@ -28,9 +27,17 @@
                 <!-- MENU -->
                 <VBox spacing="15">
                     <children>
-                        <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goHome"/>
-                        <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goEvents"/>
-                        <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goTickets"/>
+                        <Label text="Home"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goHome"/>
+
+                        <Label text="Events"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goEvents"/>
+
+                        <Label text="My tickets"
+                               style="-fx-text-fill: white; -fx-font-size: 18;"
+                               onMouseClicked="#goTickets"/>
                     </children>
                 </VBox>
 
@@ -68,7 +75,8 @@
                         <!-- EVENT 1 -->
                         <HBox spacing="20"
                               prefWidth="900"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-border-color: #D1D5DB;">
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 20; -fx-border-color: #D1D5DB;">
 
                             <children>
 
@@ -126,7 +134,8 @@
                         <!-- EVENT 2 -->
                         <HBox spacing="20"
                               prefWidth="900"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-border-color: #D1D5DB;">
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 20; -fx-border-color: #D1D5DB;">
 
                             <children>
 
@@ -184,7 +193,8 @@
                         <!-- EVENT 3 -->
                         <HBox spacing="20"
                               prefWidth="900"
-                              style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-border-color: #D1D5DB;">
+                              style="-fx-background-color: white; -fx-background-radius: 10;
+                                     -fx-padding: 20; -fx-border-color: #D1D5DB;">
 
                             <children>
 
