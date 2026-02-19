@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.CreateEventController"
+            prefWidth="1000"
+            prefHeight="650">
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1E3A8A; -fx-padding: 20;">
+            <children>
+                <Button text="Home" onAction="#goHome" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
+                <Button text="Events" onAction="#goEvents" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
+                <Button text="Create event" onAction="#goCreateEvent" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
+                <Button text="My tickets" onAction="#goTickets" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
+
+                <Pane VBox.vgrow="ALWAYS" />
+
+                <Button text="Account settings" onAction="#goAccount" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- MAIN CONTENT -->
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 30;">
+            <children>
+
+                <Label text="Create Event" style="-fx-font-size: 32; -fx-font-weight: bold;" />
+
+                <GridPane hgap="20" vgap="15">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <children>
+                        <Label text="Event name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="eventNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="descriptionField" prefRowCount="3" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Capacity:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="capacityField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Price:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="priceField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Date:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <DatePicker fx:id="datePicker" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                        <Label text="Start time:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="startTimeField" promptText="HH:MM" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                        <Label text="End time:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <TextField fx:id="endTimeField" promptText="HH:MM" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                        <Label text="Location:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <TextField fx:id="locationField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                        <Label text="Upload picture:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                        <Button text="Choose file" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+
+                <HBox spacing="20">
+                    <children>
+                        <Button text="Cancel" onAction="#cancel" style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 8;" />
+                        <Button text="Create" onAction="#createEvent" style="-fx-background-color: #22C55E; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 8;" />
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -30,6 +30,7 @@
                     <children>
                         <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goHome"/>
                         <Label text="Events" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goEvents"/>
+                        <Label text="Create event" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goCreateEvent"/>
                         <Label text="My tickets" style="-fx-text-fill: white; -fx-font-size: 18;" onMouseClicked="#goTickets"/>
                     </children>
                 </VBox>
